@@ -236,7 +236,7 @@
 {%- endblock repeated_row %}
 
 {% block form_row -%}
-    <div>
+    <div class="form-row">
         {{- form_label(form) -}}
         {{- form_errors(form) -}}
         {{- form_widget(form) -}}
@@ -244,7 +244,7 @@
 {%- endblock form_row %}
 
 {% block button_row -%}
-    <div>
+    <div class="button-row">
         {{- form_widget(form) -}}
     </div>
 {%- endblock button_row %}
@@ -287,7 +287,7 @@
 
 {% block form_errors -%}
     {% if errors|length > 0 -%}
-    <ul>
+    <ul class="form-errors">
         {%- for error in errors -%}
             <li>{{ error.message }}</li>
         {%- endfor -%}
